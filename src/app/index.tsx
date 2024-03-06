@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,FlatList } from 'react-native';
-import DayListItems from './src/components/core/DayListItems';
-export default function App() {
+import { StyleSheet, Text, View,FlatList, ActivityIndicator } from 'react-native';
+import DayListItems from '@components/core/DayListItems';
+
+export default function HomeScreen() {
 
   const days=[...Array(24)].map((val,index)=>index+1)
   return (
@@ -12,12 +13,7 @@ export default function App() {
         contentContainerStyle={styles.content}
         columnWrapperStyle={styles.column}
         renderItem={({item})=><DayListItems day={item}/>}
-      
-      
       />
-
-
-
       {/* {days.map((date)=>{
         return(
             <View style={styles.box} key={date}> 
@@ -61,6 +57,7 @@ const styles = StyleSheet.create({
   },
   text:{
     color:"#9b4521",
-    fontSize:70
+    fontSize:70,
+    
   }
 });
