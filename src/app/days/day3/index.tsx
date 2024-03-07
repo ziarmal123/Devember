@@ -1,18 +1,28 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Link, Stack } from 'expo-router'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
+import MarkDownDisplay from '@/components/day3/MarkdownDisplay'
+
+const description= `
+# Markdown
+
+Integrate Markdown content in **React Native
+`
 const Day3 = () => {
+    
   return (
-    <View>
+      <SafeAreaView edges={['bottom']} style={{flex:1}}>
       <Stack.Screen options={{title:"Markdown Editor"}}/>
-      <Text>Day3</Text>
+      <MarkDownDisplay>{description}</MarkDownDisplay>
       <Link href="/days/day3/editor" asChild>
-      <Button title='Go to Editor' color={"black"} />
+      <Button title='Go to Editor'/>
       </Link>
-    </View>
+      </SafeAreaView>
+    
   )
 }
 
 export default Day3
 
-const styles = StyleSheet.create({})
