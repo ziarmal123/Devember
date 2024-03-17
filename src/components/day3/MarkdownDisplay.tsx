@@ -17,7 +17,7 @@ export default MarkDownDisplay
 const markdownStyles = StyleSheet.create({
     heading1:{
         color:'red',
-        fontSize:45,
+        fontSize:55,
         fontFamily:'AmaticBold',
         marginTop:10,
         marginBottom:5,
@@ -30,9 +30,9 @@ const markdownStyles = StyleSheet.create({
         marginBottom:5
     },
     body:{
-      fontSize:16,
-      fontFamily:'Inter',
-      lineHeight:20
+      fontSize:45,
+      fontFamily:'Inter_Bold',
+    
     }
 })
 
