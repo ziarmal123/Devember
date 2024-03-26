@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen'
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import AnimatedSplashScreen from "@/components/day4/animatedSplashScreen";
+import BiometricsProvider from "@/components/day6/Biometrics";
 // SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout(){
@@ -35,11 +36,13 @@ export default function RootLayout(){
        }}/>   
      }
      
-    return <GestureHandlerRootView style={{flex:1}}>
+    return (   
+ <BiometricsProvider>
+ <GestureHandlerRootView style={{flex:1}}>
         <Stack screenOptions={{}}>
         <Stack.Screen name="index" options={{title:"Devember"}}/>
         </Stack>
       </GestureHandlerRootView>
     
-    
+  </BiometricsProvider>)
 }
